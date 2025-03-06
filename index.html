@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tit{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav1{
+            display: flex;
+            gap: 10px;
+        }
+        .parent{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 2%;
+        }
+        .imgs{
+            width: 20%;
+        }
+        .project{
+            display: block;
+        }
+        .parent2{
+            display: flex;
+            gap: 10px;
+        }
+        .loc_img{
+            margin-top: 4%;
+            width: 100%;
+            height: 100vh;
+        }
+        .footer{
+            background-color: black;
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+        .san{
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script>
+        var header = document.createElement("div")
+        var title = document.createElement("h2")
+        var nav = document.createElement("nav")
+        title.innerHTML = '<span class="tit">B R Architects</span>'
+        nav.innerHTML = '<nav class="nav1"><span>Projects</span><span>About</span><span>Contact</span> </nav>'
+        header.classList.add("tit")
+        nav.classList.add("nav1");
+        header.append(title,nav)
+        document.body.append(header)
+        console.log(header)
+
+        var img =document.createElement('div');
+        var img1 = document.createElement("img")
+        img1.setAttribute('src','https://www.w3schools.com/w3images/architect.jpg');
+        img1.style.width = "100%"
+        img.append(img1)
+        document.body.append(img)
+        console.log(img)
+
+        var container =document.createElement('div');
+           var tit2 =['Summer House','Brick House','Renovated','Barn House','Summer House','Brick House','Renovated','Barn House']
+           var imgs =["http://w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house3.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house2.jpg","https://www.w3schools.com/w3images/house5.jpg","https://www.w3schools.com/w3images/house4.jpg","https://www.w3schools.com/w3images/house3.jpg"]
+            container.style.marginTop='5%'
+           for(i=0;i<=7;i++){
+            var child = document.createElement('div')
+            var img2 = document.createElement('img')
+
+            var h1 = document.createElement('h4')
+
+            h1.innerText = tit2[i]
+            img2.src = imgs[i]
+            img2.style.width ="100%"
+            img2.style.height ="50vh"
+            child.append(img2,h1)
+            container.append(child)
+           }
+           document.body.append(container)
+           container.classList.add("parent")
+           console.log(container)
+
+
+           var about = document.createElement('div')
+           var about1 = document.createElement("h1")
+           var para =document.createElement("p")
+           about1.innerText='About'
+           para.innerText ='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+           about.style.marginTop='5%'
+           about.append(about1,para)
+           document.body.append(about)
+           console.log(about)
+
+           var cards = document.createElement('div')
+           var imgss =['https://www.w3schools.com/w3images/team2.jpg','https://www.w3schools.com/w3images/team1.jpg','https://www.w3schools.com/w3images/team3.jpg','https://www.w3schools.com/w3images/team4.jpg']
+           var h11 = ['John Doe','Rosy','Mike Ross','Dan Star']
+           var paraa =['Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.','Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.','Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.','Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.']
+           for(i=0;i<=3;i++){
+            var childs = document.createElement('div')
+            var imgs4 =document.createElement('img')
+            var h1=document.createElement("h1")
+            var p=document.createElement("p")
+
+            imgs4.src=imgss[i]
+            imgs4.style.width='100%';
+            imgs4.style.height='50vh'
+            h1.innerText=h11[i]
+            p.innerText=paraa[i]
+
+            childs.append(imgs4,h1,p)
+            cards.append(childs)
+         }
+         document.body.append(cards)
+         cards.classList.add('parent2')
+         console.log(cards)
+
+
+         var loc = document.createElement('div')
+         var loc_img = document.createElement("img")
+         loc_img.setAttribute("src","https://www.w3schools.com/w3images/map.jpg");
+         loc_img.classList.add("loc_img")
+         loc.append(loc_img)
+         document.body.append(loc)
+         console.log(loc)
+
+
+         var footer = document.createElement("div");
+         var san = document.createElement("p");
+         san.innerText = 'Developed by Sandhya'
+         footer.classList.add('footer')
+         san.classList.add("san")
+         footer.append(san)
+         document.body.append(footer)
+         console.log(footer)
+
+
+    </script>
+</body>
+</html>
